@@ -7,3 +7,5 @@ ex) git push -u origin main / git push -u master master
 
 git checkout 브랜치명
 push하고자 하는 파일을 지정해서 보내고 싶을 경우 브랜치 변경해서 커밋 후 push
+필요한 파일이 여러개인 경우 필요한 파일만 쏙 골라서 브랜치 변경
+git checkout 브랜치명 -- file1.py file2.html images/logo.png
