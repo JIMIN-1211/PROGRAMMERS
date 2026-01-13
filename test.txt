@@ -1,2 +1,9 @@
-git push -u origin 브랜치명
-ex) git push -u origin main / git push -u master
+git remote -v
+--> 내가 지정한 리포지터리 명 확인
+git push -u 리포지터리명 브랜치명
+리포지터리 별 푸시
+ex) git push -u origin main / git push -u master master 
+--> master 리포지터리의 master 브랜치에 push 하겠다.
+
+git checkout 브랜치명
+push하고자 하는 파일을 지정해서 보내고 싶을 경우 브랜치 변경해서 커밋 후 push
