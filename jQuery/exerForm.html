@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $('#email').on('keyup', function(){
+                var email = $('#email').val();
+                console.log(email);
+            });
+            // $('#email').val("이메일입니다"); value값을 변경해 줄 수 있음
+            
+            $('#jobs').on('change', function(){
+                alert($('#jobs option:selected').text());
+            });
+
+            $('#age').on('click', function(){
+                var checked = $(this).prop("checked");
+
+                if(checked){
+                    $('input[type=checkbox] [name=age]').prop('checked', true);
+                }else {
+                    $('input[type=checkbox] [name=age]').prop('checked', false);
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <label for="email">이메일</label>
+    <hr />
+    <input type="text" id="email" placeholder="이메일을 입력하세요" /><br />
+    <br />
+    <label for="jobs">직업</label>
+    <hr />
+    <select id="jobs">
+        <option value="0">선택하세요</option>
+        <option value="1">교사</option>
+        <option value="2">학생</option>
+        <option value="3">회사원</option>
+    </select>
+    <div>
+        <h5>연령대</h5>
+        <hr />
+        <label for="age">전체 선택/해제</label>
+        <input type="checkbox" name="age" id="age" value="0" />
+        <label for ="age10">10대</label>
+        <input type="checkobx" name="age" id="age10" value="10" />
+        <label for="age20">20대</label>
+        <input type="checkbox" name="age" id="age20" value="20" />
+        <label for="age30">30대</label>
+        <input type="checkbox" name="age" id="age30" value="30" />
+        <label for="age40">40eo</label>
+        <input type="checkbox" name="age" id="age40" value="40" />
+    </div>
+</body>
+</html>
